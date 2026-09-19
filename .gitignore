@@ -1,0 +1,16 @@
+# local tests
+tests/
+.pytest_cache/
+
+# results saved from the notebooks, and covariances rebuilt in notebook 2
+stars/*/*_results.npz
+stars/*/*_rebuilt.npz
+
+# python and jupyter
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+.DS_Store
