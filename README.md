@@ -14,6 +14,10 @@ The emulator covers only the range of its training grid: initial masses of 1.4 t
 `velociscuti` is published with the associated paper:
 - Gautam & Murphy, **An asteroseismic age estimate for the Pleiades using a neural-network emulator of rotating $\delta$ Scuti pulsation models** (link to be added when the paper is out)
 
+###  Interactive demo
+Try the emulator in your browser [here](https://gautam-404.github.io/velociscuti/). <br>
+The interactive page runs the emulator and shows the predicted frequencies as an échelle diagram, together with the 14 stellar and seismic quantities, as you change the mass, metallicity, age and rotation velocity.
+
 ## Getting started:
 ```
 git clone https://github.com/gautam-404/velociscuti-inference
