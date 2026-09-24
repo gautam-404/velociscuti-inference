@@ -135,8 +135,15 @@ def build_covariance(star_name, priors=None, save_as=None, n_samples=100000, see
     # prior-density weights
     # -----------------------
     weights = np.ones(residuals.shape[0], dtype=np.float64)
-    for j, prior in enumerate(priors):
-        weights *= prior.pdf(selected_inputs[:, j])
+    for j, (name, prior) in enumerate(zip(PARAM_NAMES, priors)):
+        values = selected_inputs[:, j]
+        if name in ('m', 'z'):
+            ## weigh a row where the mask found it, at the rounded node. the stored 2.5 node
+            ## reads 2.50000008, where a prior ending at 2.5 is zero, and a limit such as
+            ## 2.499996 rounds to admit that node too, hence the clip into the prior's limits
+            lo, hi = prior_limits(prior)
+            values = np.clip(np.round(values, 5), lo, hi)
+        weights *= prior.pdf(values)
     total = float(weights.sum())
     if total <= 0.0 or not np.all(np.isfinite(weights)):
         raise RuntimeError('[build_covariance] the prior density is zero or undefined on every calibration row.')
