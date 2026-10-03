@@ -1,13 +1,5 @@
 # Velociscuti
 ## Ages of young $\delta$ Scuti stars from their pulsation frequencies, with a neural network emulator of rotating stellar models
-<div align="center" style="display: flex; flex-direction: row; justify-content: flex-start; align-items: center; gap: 0; width: 100%; overflow: hidden;">
-  <div style="flex: 1 1 50%; width: 50%; min-width: 0; aspect-ratio: 16 / 9;">
-    <img src="assets/emulator_demo_simple_720p.gif" alt="Emulator demo from the NN paper" style="width: 100%; height: 100%; object-fit: contain; display: block;" />
-  </div>
-  <div style="flex: 1 1 50%; width: 50%; min-width: 0; aspect-ratio: 16 / 9;">
-    <img src="assets/V624_Tau_nested_sampling.gif" alt="Animated corner plot of the nested-sampling fit of V624 Tau" style="width: 100%; height: 100%; object-fit: contain; display: block;" />
-  </div>
-</div>
 
 Asteroseismology of $\delta$ Scuti stars has strong potential for determining the ages of young stars through individual mode fitting. `velociscuti` is a neural network that emulates a grid of rotating stellar models (MESA) and their pulsation frequencies (StORM). Given a mass, a metallicity, an age and a rotation velocity, it returns 14 stellar and seismic quantities (such as $T_{\rm eff}$ and the large frequency separation) and 218 pulsation frequencies.
 
@@ -25,6 +17,10 @@ The emulator covers only the range of its training grid: initial masses of 1.4 t
 ###  Interactive demo
 Try the emulator in your browser [here](https://gautam-404.github.io/velociscuti/). <br>
 The interactive page runs the emulator and shows the predicted frequencies as an échelle diagram, together with the 14 stellar and seismic quantities, as you change the mass, metallicity, age and rotation velocity.
+
+<p align="center">
+  <a href="https://gautam-404.github.io/velociscuti/"><img src="assets/emulator_demo_simple_720p.gif" alt="Emulator demo from the NN paper" width="49.5%" /></a><img src="assets/V624_Tau_nested_sampling.gif" alt="Animated corner plot of the nested-sampling fit of V624 Tau" width="49.5%" />
+</p>
 
 ## Getting started:
 ```
