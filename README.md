@@ -19,7 +19,7 @@ Try the emulator in your browser [here](https://gautam-404.github.io/velociscuti
 The interactive page runs the emulator and shows the predicted frequencies as an échelle diagram, together with the 14 stellar and seismic quantities, as you change the mass, metallicity, age and rotation velocity.
 
 <p align="center">
-  <a href="https://gautam-404.github.io/velociscuti/"><img src="assets/emulator_demo_simple_720p.gif" alt="Emulator demo from the NN paper" width="49.5%" /></a><img src="assets/V624_Tau_nested_sampling.gif" alt="Animated corner plot of the nested-sampling fit of V624 Tau" width="49.5%" />
+  <a href="https://gautam-404.github.io/velociscuti/"><img src="assets/emulator_demo_simple_720p.gif" alt="Emulator demo from the NN paper" width="64%" /></a><img src="assets/V624_Tau_nested_sampling.gif" alt="Animated corner plot of the nested-sampling fit of V624 Tau" width="36%" />
 </p>
 
 ## Getting started:
